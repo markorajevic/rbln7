@@ -1,0 +1,36 @@
+{
+  "name": "rbln7",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Marko Rajevic",
+  "main": "dist/rbln7.umd.js",
+  "module": "dist/rbln7.esm.js",
+  "unpkg": "dist/rbln7.min.js",
+  "files": [
+    "dist/*",
+    "src/*",
+    "!src/lib-dev.vue"
+  ],
+  "scripts": {
+    "build": "npm run build:unpkg & npm run build:es & npm run build:umd",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/rbln7.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/rbln7.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/rbln7.min.js"
+  },
+  "dependencies": {
+    "node-sass": "^4.11.0",
+    "smooth-scrollbar": "^8.3.1"
+  },
+  "devDependencies": {
+    "babel-preset-vue-app": "^2.0.0",
+    "minimist": "^1.2.0",
+    "rollup": "^0.66.2",
+    "rollup-plugin-buble": "^0.19.2",
+    "rollup-plugin-css-only": "^0.4.0",
+    "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "rollup-plugin-vue": "^4.3.0",
+    "vue": "^2.5.16",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
