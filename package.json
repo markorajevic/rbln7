@@ -18,7 +18,8 @@
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/rbln7.min.js"
   },
   "dependencies": {
-    "node-sass": "^4.11.0",
+    "debug": "^4.1.0",
+    "jquery": "^3.3.1",
     "smooth-scrollbar": "^8.3.1"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "rollup-plugin-buble": "^0.19.2",
     "rollup-plugin-css-only": "^0.4.0",
     "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-strip": "^1.2.0",
     "rollup-plugin-uglify-es": "0.0.1",
     "rollup-plugin-vue": "^4.3.0",
     "vue": "^2.5.16",

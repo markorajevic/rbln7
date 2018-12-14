@@ -21,6 +21,7 @@ const config = {
     }),
     css({ output: 'dist/bundle.css' }),
     buble(),
+
   ],
 };
 

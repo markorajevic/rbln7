@@ -23,10 +23,10 @@ export default {
       }
     }
   }),
-  props: ["customOptions", "preventEvents", "scrollTo"],
+  props: ["options", "preventEvents", "scrollTo", "overscroll"],
   computed: {
     smoothOptions() {
-      var options = _.merge({}, this.defaults, this.customOptions);
+      var options = _.merge({}, this.defaults, this.options);
       return options;
     }
   },
@@ -49,16 +49,10 @@ export default {
   methods: {
     initSmooth(el) {
       var self = this;
-
-      // let ticking;
-      // if (this.isMobile) {
-      //   this.$el.removeEventListener('scroll', self.onScroll);
-      //   this.$el.addEventListener('scroll', self.onScroll)
-      //   return
-      // }
-
+      // console.log("dadadada");
+      // if (this.overscroll) {
       // Scrollbar.use(OverscrollPlugin);
-
+      // }
       this.scrollbar = Scrollbar.init(el, this.smoothOptions);
 
       this.$bus.$on("updateScrollbar", e => {
